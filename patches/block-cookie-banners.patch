@@ -42,3 +42,16 @@ index 8f6c6df..7cd33bf 100644
              "feature-setting-value-pbm": 1,
              "feature-setting-detect-only": 0,
              "feature-setting-global-rules": 1,
+diff --git a/mobile/android/fenix/app/src/main/res/xml/preferences.xml b/mobile/android/fenix/app/src/main/res/xml/preferences.xml
+index c03abd3..2abf25c 100644
+--- a/mobile/android/fenix/app/src/main/res/xml/preferences.xml
++++ b/mobile/android/fenix/app/src/main/res/xml/preferences.xml
+@@ -111,7 +111,7 @@
+         <org.mozilla.fenix.settings.cookiebannerhandling.CustomCBHSwitchPreference
+             android:key="@string/pref_key_cookie_banner_private_mode"
+             app:iconSpaceReserved="false"
+-            app:isPreferenceVisible="false"
++            app:isPreferenceVisible="true"
+             android:title="@string/preferences_cookie_banner_reduction_private_mode" />
+ 
+         <androidx.preference.Preference
