@@ -297,6 +297,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/sanitize-on-exit.patch"
 # Disable 'Meta Attribution' - just more telemetry - used to track referrals
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-meta-attribution.patch"
 
+# Disable Campaign Growth Data Measurement - more telemetry :/
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-campaign-growth-data-measurement.patch"
+
 # Disable Firefox Suggest
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-firefox-suggest.patch"
 
