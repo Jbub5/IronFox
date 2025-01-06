@@ -11,3 +11,16 @@ index 807c5c2..96517fb 100644
      )
  
      var adjustCampaignId by stringPreference(
+diff --git a/mobile/android/fenix/app/src/main/res/xml/accessibility_preferences.xml b/mobile/android/fenix/app/src/main/res/xml/accessibility_preferences.xml
+index a810f76..adba536 100644
+--- a/mobile/android/fenix/app/src/main/res/xml/accessibility_preferences.xml
++++ b/mobile/android/fenix/app/src/main/res/xml/accessibility_preferences.xml
+@@ -24,7 +24,7 @@
+         app:seekBarIncrement="1"
+         app:showSeekBarValue="true" />
+     <SwitchPreference
+-        android:defaultValue="false"
++        android:defaultValue="true"
+         android:key="@string/pref_key_accessibility_force_enable_zoom"
+         android:summary="@string/preference_accessibility_force_enable_zoom_summary"
+         android:title="@string/preference_accessibility_force_enable_zoom"
