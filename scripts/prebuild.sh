@@ -273,6 +273,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/strict_etp.patch"
 # Enable HTTPS only mode by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/https_only.patch"
 
+# Enable Global Privacy Control by default
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/global_privacy_control.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
