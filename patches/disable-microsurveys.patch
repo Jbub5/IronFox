@@ -1,7 +1,29 @@
-diff --git a/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt b/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
-index 807c5c2..01a2009 100644
---- a/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
-+++ b/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
+diff --git a/app/nimbus.fml.yaml b/app/nimbus.fml.yaml
+index 8f6c6df..7a8db7e 100644
+--- a/app/nimbus.fml.yaml
++++ b/app/nimbus.fml.yaml
+@@ -549,7 +549,7 @@ features:
+         description: >
+           When the feature is enabled then microsurveys can be used.
+         type: Boolean
+-        default: true
++        default: false
+ 
+   set-as-default-prompt:
+     description: >
+diff --git a/app/src/main/java/org/mozilla/fenix/utils/Settings.kt b/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
+index 807c5c2..0de26b7 100644
+--- a/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
++++ b/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
+@@ -2008,7 +2008,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
+      */
+     fun getBottomToolbarHeight(context: Context): Int {
+         val isNavbarVisible = context.shouldAddNavigationBar()
+-        val isMicrosurveyEnabled = shouldShowMicrosurveyPrompt
++        val isMicrosurveyEnabled = false
+         val isToolbarAtBottom = toolbarPosition == ToolbarPosition.BOTTOM
+ 
+         val navbarHeight = appContext.resources.getDimensionPixelSize(R.dimen.browser_navbar_height)
 @@ -2060,7 +2060,7 @@ class Settings(private val appContext: Context) : PreferencesHolder {
       */
      fun getBottomToolbarContainerHeight(): Int {
