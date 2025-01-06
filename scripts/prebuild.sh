@@ -274,16 +274,16 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/strict_etp.patch"
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/https_only.patch"
 
 # Enable Global Privacy Control by default
-patch -p1 --no-backup-if-mismatch --quiet <"$patches/global_privacy_control.patch"
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/global-privacy-control.patch"
 
 # Disable search suggestions by default
-patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-search_suggestions.patch"
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-search-suggestions.patch"
 
 # Disable autocomplete by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autocomplete.patch"
 
 # Disable prompt to enable search suggestions in private windows
-patch -p1 --no-backup-if-mismatch --quiet <"$patches/dont-prompt-to-enable-search_suggestions.patch"
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/dont-prompt-to-enable-search-suggestions.patch"
 
 # Disable password manager/autofill for login info by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-login-autofill.patch"
@@ -293,6 +293,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autofill.patch"
 
 # Clear open tabs, browsing history, cache, & download list on exit by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/sanitize-on-exit.patch"
+
+# Disable 'Meta Attribution' - just more telemetry - used to track referrals
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-meta-attribution.patch"
 
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
