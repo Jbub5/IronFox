@@ -20,3 +20,25 @@ index 807c5c2..2496b81 100644
      )
  
      /**
+diff --git a/mobile/android/fenix/app/src/main/res/xml/autofill_preferences.xml b/mobile/android/fenix/app/src/main/res/xml/autofill_preferences.xml
+index aa1efa9..1ccfc1f 100644
+--- a/mobile/android/fenix/app/src/main/res/xml/autofill_preferences.xml
++++ b/mobile/android/fenix/app/src/main/res/xml/autofill_preferences.xml
+@@ -10,7 +10,7 @@
+         android:title="@string/preferences_addresses">
+ 
+         <SwitchPreference
+-            android:defaultValue="true"
++            android:defaultValue="false"
+             android:key="@string/pref_key_addresses_save_and_autofill_addresses"
+             android:summary="@string/preferences_addresses_save_and_autofill_addresses_summary_2"
+             android:title="@string/preferences_addresses_save_and_autofill_addresses_2" />
+@@ -23,7 +23,7 @@
+         android:layout="@layout/preference_cat_style"
+         android:title="@string/preferences_credit_cards_2">
+         <SwitchPreference
+-            android:defaultValue="true"
++            android:defaultValue="false"
+             android:key="@string/pref_key_credit_cards_save_and_autofill_cards"
+             android:summary="@string/preferences_credit_cards_save_and_autofill_cards_summary_2"
+             android:title="@string/preferences_credit_cards_save_and_autofill_cards_2" />
