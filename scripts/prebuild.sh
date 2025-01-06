@@ -312,6 +312,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-sponsored-stories.p
 # Disable Mozilla Feedback Surveys (Microsurveys)
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-microsurveys.patch"
 
+# Enable per-site process isolation (Fission)
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/enable-fission.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
