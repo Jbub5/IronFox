@@ -279,6 +279,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/global_privacy_control.patc
 # Disable search suggestions by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-search_suggestions.patch"
 
+# Disable autocomplete by default
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autocomplete.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
