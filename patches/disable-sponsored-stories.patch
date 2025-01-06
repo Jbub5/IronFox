@@ -1,7 +1,7 @@
-diff --git a/app/nimbus.fml.yaml b/app/nimbus.fml.yaml
+diff --git a/mobile/android/fenix/app/nimbus.fml.yaml b/mobile/android/fenix/app/nimbus.fml.yaml
 index 8f6c6df..53f9f93 100644
---- a/app/nimbus.fml.yaml
-+++ b/app/nimbus.fml.yaml
+--- a/mobile/android/fenix/app/nimbus.fml.yaml
++++ b/mobile/android/fenix/app/nimbus.fml.yaml
 @@ -48,8 +48,8 @@ features:
              "jump-back-in": true,
              "bookmarks": true,
