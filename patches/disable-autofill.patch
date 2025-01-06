@@ -42,3 +42,16 @@ index aa1efa9..1ccfc1f 100644
              android:key="@string/pref_key_credit_cards_save_and_autofill_cards"
              android:summary="@string/preferences_credit_cards_save_and_autofill_cards_summary_2"
              android:title="@string/preferences_credit_cards_save_and_autofill_cards_2" />
+diff --git a/mobile/android/fenix/app/src/main/res/xml/credit_cards_preferences.xml b/mobile/android/fenix/app/src/main/res/xml/credit_cards_preferences.xml
+index 00caf8e..b4efbb8 100644
+--- a/mobile/android/fenix/app/src/main/res/xml/credit_cards_preferences.xml
++++ b/mobile/android/fenix/app/src/main/res/xml/credit_cards_preferences.xml
+@@ -5,7 +5,7 @@
+ <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+     <SwitchPreference
+-        android:defaultValue="true"
++        android:defaultValue="false"
+         android:key="@string/pref_key_credit_cards_save_and_autofill_cards"
+         android:summary="@string/preferences_credit_cards_save_and_autofill_cards_summary_2"
+         android:title="@string/preferences_credit_cards_save_and_autofill_cards_2" />
