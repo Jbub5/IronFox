@@ -318,6 +318,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/enable-fission.patch"
 # Enable FPP (Fingerprinting Protection)
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/enable-fingerprinting-protection.patch"
 
+# Disable Fakespot ("Shopping Experience"...)
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-shopping-experience.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
