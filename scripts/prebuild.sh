@@ -309,6 +309,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-cfrs.patch"
 # Disable Pocket Sponsored Stories
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-sponsored-stories.patch"
 
+# Disable Mozilla Feedback Surveys (Microsurveys)
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-microsurveys.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
