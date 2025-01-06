@@ -297,6 +297,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/sanitize-on-exit.patch"
 # Disable 'Meta Attribution' - just more telemetry - used to track referrals
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-meta-attribution.patch"
 
+# Disable Firefox Suggest
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-firefox-suggest.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
