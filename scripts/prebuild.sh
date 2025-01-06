@@ -321,6 +321,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/enable-fingerprinting-prote
 # Disable Fakespot ("Shopping Experience"...)
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-shopping-experience.patch"
 
+# Remove tracking parameters from URLs
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/remove-tracking-params.patch"
+
 # Switch the built-in extension recommendations page to use our collection instead of Mozilla's...
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/extension-recommendations.patch"
 
