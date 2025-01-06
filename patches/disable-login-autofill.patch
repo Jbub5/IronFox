@@ -1,0 +1,19 @@
+diff --git a/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt b/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
+index 807c5c2..1a248ad 100644
+--- a/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
++++ b/mobile/android/fenix/app/src/main/java/org/mozilla/fenix/utils/Settings.kt
+@@ -1235,12 +1235,12 @@ class Settings(private val appContext: Context) : PreferencesHolder {
+ 
+     var shouldPromptToSaveLogins by booleanPreference(
+         appContext.getPreferenceKey(R.string.pref_key_save_logins),
+-        default = true,
++        default = false,
+     )
+ 
+     var shouldAutofillLogins by booleanPreference(
+         appContext.getPreferenceKey(R.string.pref_key_autofill_logins),
+-        default = true,
++        default = false,
+     )
+ 
+     /**

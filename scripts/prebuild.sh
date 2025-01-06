@@ -285,6 +285,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autocomplete.patch"
 # Disable prompt to enable search suggestions in private windows
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/dont-prompt-to-enable-search_suggestions.patch"
 
+# Disable password manager/autofill for login info by default
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-login-autofill.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
