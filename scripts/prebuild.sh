@@ -330,6 +330,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/remove-tracking-params.patc
 # Block cookie banners by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/block-cookie-banners.patch"
 
+# Block third party cookies by default (Ex. how ETP Strict on desktop behaves...)
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/block-third-party-cookies.patch"
+
 # Switch the built-in extension recommendations page to use our collection instead of Mozilla's...
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/extension-recommendations.patch"
 
