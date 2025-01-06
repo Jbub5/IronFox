@@ -306,6 +306,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/force-enable-zoom.patch"
 # Disable Contextual Feature Recommendations
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-cfrs.patch"
 
+# Disable Pocket Sponsored Stories
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-sponsored-stories.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
