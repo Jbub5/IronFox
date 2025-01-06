@@ -289,7 +289,7 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/dont-prompt-to-enable-searc
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-login-autofill.patch"
 
 # Disable credit card/address autofill by default
-patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-login-autofill.patch"
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autofill.patch"
 
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
