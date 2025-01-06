@@ -303,6 +303,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-firefox-suggest.pat
 # Enable "Zoom on all websites" by default - allows always zooming into websites, even if they try to block it...
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/force-enable-zoom.patch"
 
+# Disable Contextual Feature Recommendations
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-cfrs.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
