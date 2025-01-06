@@ -1,0 +1,44 @@
+diff --git a/mobile/android/fenix/app/nimbus.fml.yaml b/mobile/android/fenix/app/nimbus.fml.yaml
+index 8f6c6df..7cd33bf 100644
+--- a/mobile/android/fenix/app/nimbus.fml.yaml
++++ b/mobile/android/fenix/app/nimbus.fml.yaml
+@@ -157,9 +157,9 @@ features:
+         type: Map<CookieBannersSection, Int>
+         default:
+           {
+-            "feature-ui": 0,
+-            "feature-setting-value": 0,
+-            "feature-setting-value-pbm": 0,
++            "feature-ui": 1,
++            "feature-setting-value": 1,
++            "feature-setting-value-pbm": 1,
+             "feature-setting-detect-only": 0,
+             "feature-setting-global-rules": 1,
+             "feature-setting-global-rules-sub-frames": 1,
+@@ -169,7 +169,7 @@ features:
+         value: {
+           "sections-enabled": {
+             "feature-ui": 1,
+-            "feature-setting-value": 0,
++            "feature-setting-value": 1,
+             "feature-setting-value-pbm": 1,
+             "feature-setting-detect-only": 0,
+             "feature-setting-global-rules": 1,
+@@ -180,7 +180,7 @@ features:
+         value: {
+           "sections-enabled": {
+             "feature-ui": 1,
+-            "feature-setting-value": 0,
++            "feature-setting-value": 1,
+             "feature-setting-value-pbm": 1,
+             "feature-setting-detect-only": 0,
+             "feature-setting-global-rules": 1,
+@@ -191,7 +191,7 @@ features:
+         value: {
+           "sections-enabled": {
+             "feature-ui": 1,
+-            "feature-setting-value": 0,
++            "feature-setting-value": 1,
+             "feature-setting-value-pbm": 1,
+             "feature-setting-detect-only": 0,
+             "feature-setting-global-rules": 1,
