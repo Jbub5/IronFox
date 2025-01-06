@@ -11,3 +11,16 @@ index 807c5c2..79ab9a1 100644
      )
  
      val shouldAutocompleteInAwesomebar by booleanPreference(
+diff --git a/mobile/android/fenix/app/src/main/res/xml/search_settings_preferences.xml b/mobile/android/fenix/app/src/main/res/xml/search_settings_preferences.xml
+index a4de5c1..e15e096 100644
+--- a/mobile/android/fenix/app/src/main/res/xml/search_settings_preferences.xml
++++ b/mobile/android/fenix/app/src/main/res/xml/search_settings_preferences.xml
+@@ -27,7 +27,7 @@
+         android:layout="@layout/preference_category_no_icon_style">
+          <SwitchPreference
+             app:iconSpaceReserved="false"
+-            android:defaultValue="true"
++            android:defaultValue="false"
+             android:key="@string/pref_key_show_search_suggestions"
+             android:title="@string/preferences_show_search_suggestions" />
+         <CheckBoxPreference
