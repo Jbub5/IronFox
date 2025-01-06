@@ -291,6 +291,9 @@ patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-login-autofill.patc
 # Disable credit card/address autofill by default
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/disable-autofill.patch"
 
+# Clear open tabs, browsing history, cache, & download list on exit by default
+patch -p1 --no-backup-if-mismatch --quiet <"$patches/sanitize-on-exit.patch"
+
 # Fix v125 compile error
 patch -p1 --no-backup-if-mismatch --quiet <"$patches/gecko-fix-125-compile.patch"
 
