@@ -1,0 +1,96 @@
+name: Build
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build by ${{ github.actor }}
+    runs-on: ubuntu-20.04
+    env:
+      VERSION_NAME: '134.0'
+      VERSION_CODE: '31340000'
+    steps:
+    - uses: actions/checkout@v4
+    - name: Remove unused packages
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: true
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: false
+        docker-images: true
+        swap-storage: true
+
+    - name: Install packages
+      run: |
+        sudo apt update
+        sudo apt install -y make \
+                cmake \
+                clang-18 \
+                gyp \
+                ninja-build \
+                patch \
+                perl \
+                wget \
+                unzip \
+                xz-utils \
+                zlib1g-dev \
+                python3.9 \
+                python3.9-venv \
+                openjdk-8-jdk \
+                openjdk-17-jdk
+        sudo rm -rf /var/cache/apt/archives
+
+    - name: Setup F-Droids gradle script to be available in PATH
+      run: |
+        mkdir -p $HOME/bin
+        wget https://gitlab.com/fdroid/fdroidserver/-/raw/master/gradlew-fdroid -O "$HOME/bin/gradle"
+        chmod +x "$HOME/bin/gradle"
+
+        export PATH="$HOME/bin:$PATH"
+
+    - name: Disable Gradle Daemons and configuration cache
+      run: |
+        mkdir -p ~/.gradle
+        echo "org.gradle.daemon=false" >> ~/.gradle/gradle.properties
+        echo "org.gradle.configuration-cache=false" >> ~/.gradle/gradle.properties
+
+    - name: Create a new Python 3.9 virtual environment
+      run: |
+        python3.9 -m venv env
+        source env/bin/activate
+
+    - name: Set JDK 17
+      run: |
+        [ -d /usr/lib/jvm/java-17-openjdk ] && echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk" >> $GITHUB_ENV || \
+        [ -d /usr/lib/jvm/java-17-openjdk-amd64 ] && echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
+
+    - name: Android SDK installation
+      run: |
+        source ./scripts/setup-android-sdk.sh
+
+    - name: Get sources
+      run: |
+        ./scripts/get_sources.sh
+
+    - name: Prepare build
+      run: |
+        source scripts/paths_local.sh || echo "error: source scripts/paths_local.sh"
+        ./scripts/prebuild.sh || ./scripts/prebuild.sh "${VERSION_NAME}" "${VERSION_CODE}"
+
+    - name: Build
+      run: |
+        ./scripts/build.sh
+
+    - name: Upload apk
+      uses: actions/upload-artifact@v4
+      with:
+        name: archive_apk
+        path: gecko/mobile/android/fenix/app/build/outputs/apk/fenix/release/*.apk
+
+    - name: Upload aab
+      uses: actions/upload-artifact@v4
+      with:
+        name: archive_aab
+        path: gecko/mobile/android/fenix/app/build/outputs/bundle/fenixRelease/*.aab
