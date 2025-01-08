@@ -1,5 +1,10 @@
 #!/bin/bash
 
+rootdir="$(dirname "$0")/.."
+rootdir=$(realpath "$rootdir")
+
+export TRY_FIX="$PWD"
+
 echo "Install packages" && \
 {
 sudo apt update
@@ -60,21 +65,22 @@ echo "Android SDK installation" && \
 source ./scripts/setup-android-sdk.sh
 } || exit 1
 
+cd "$TRY_FIX"
 
 echo "Get sources" && \
 {
-./scripts/get_sources.sh
+source ./scripts/get_sources.sh
 } || exit 1
 
 
 echo "Prepare build" && \
 {
 source scripts/paths_local.sh || echo "error: source scripts/paths_local.sh"
-./scripts/prebuild.sh || ./scripts/prebuild.sh "${VERSION_NAME}" "${VERSION_CODE}"
+source ./scripts/prebuild.sh "${VERSION_NAME}" "${VERSION_CODE}"
 } || exit 1
 
 
 echo "Build" && \
 {
-./scripts/build.sh
+source ./scripts/build.sh
 } || exit 1
