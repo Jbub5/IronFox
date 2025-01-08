@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export VERSION_NAME='134.0'
+export VERSION_CODE='31340000'
+
 rootdir="$(dirname "$0")/.."
 rootdir=$(realpath "$rootdir")
 
