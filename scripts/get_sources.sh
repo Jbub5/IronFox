@@ -103,6 +103,8 @@ do_download() {
     echo "Extracting $repo_archive"
     extract_rmtoplevel "$repo_archive" "$repo_name"
     echo
+
+    rm -rf "$repo_archive"
 }
 
 mkdir -p "$BUILDDIR"
