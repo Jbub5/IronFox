@@ -25,7 +25,12 @@ sudo apt install -y make \
                     python3.9 \
                     python3.9-venv \
                     openjdk-8-jdk \
-                    openjdk-17-jdk
+                    openjdk-17-jdk \
+                    llvm-18 \
+                    build-essential \
+                    gcc \
+                    g++ \
+                    gcc-multilib
 
 sudo rm -rf /var/cache/apt/archives
 } || exit 1
